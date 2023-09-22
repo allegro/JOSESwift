@@ -126,6 +126,8 @@
 		C8A592401FC71586009CEFA6 /* RSADecryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A5923F1FC71586009CEFA6 /* RSADecryptionTests.swift */; };
 		C8EE14541FAC797500A616E4 /* RSAVerifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EE14531FAC797500A616E4 /* RSAVerifierTests.swift */; };
 		C8F096501FC56B25000BEE4D /* RSAEncryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0964F1FC56B25000BEE4D /* RSAEncryptionTests.swift */; };
+		F92B5B602ABDABF400CF5FDA /* AESGCMEncryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B5B5F2ABDABF400CF5FDA /* AESGCMEncryption.swift */; };
+		F92B5B622ABDACE700CF5FDA /* AESGCMEncryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B5B612ABDACE700CF5FDA /* AESGCMEncryptionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,6 +263,8 @@
 		C8A5923F1FC71586009CEFA6 /* RSADecryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSADecryptionTests.swift; sourceTree = "<group>"; };
 		C8EE14531FAC797500A616E4 /* RSAVerifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAVerifierTests.swift; sourceTree = "<group>"; };
 		C8F0964F1FC56B25000BEE4D /* RSAEncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAEncryptionTests.swift; sourceTree = "<group>"; };
+		F92B5B5F2ABDABF400CF5FDA /* AESGCMEncryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESGCMEncryption.swift; sourceTree = "<group>"; };
+		F92B5B612ABDACE700CF5FDA /* AESGCMEncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESGCMEncryptionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +316,7 @@
 				C86AC8CA1FCEC20F0007E611 /* AESCBCContentEncryptionTests.swift */,
 				C83070041FD1B7390068C5CB /* AESCBCContentDecryptionTests.swift */,
 				65B5B93F23F5604A009C8396 /* DirectEncryptionKeyManagementModeTests.swift */,
+				F92B5B612ABDACE700CF5FDA /* AESGCMEncryptionTests.swift */,
 			);
 			name = JWE;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 		6558164B23F45CAC00EA5FEC /* ContentEncryption */ = {
 			isa = PBXGroup;
 			children = (
+				F92B5B5E2ABDABD900CF5FDA /* AESGCMEncription */,
 				6558164C23F45CC200EA5FEC /* ContentEncryption.swift */,
 				6558164E23F462BC00EA5FEC /* AESCBCEncryption */,
 			);
@@ -602,6 +608,14 @@
 			path = CryptoImplementation;
 			sourceTree = "<group>";
 		};
+		F92B5B5E2ABDABD900CF5FDA /* AESGCMEncription */ = {
+			isa = PBXGroup;
+			children = (
+				F92B5B5F2ABDABF400CF5FDA /* AESGCMEncryption.swift */,
+			);
+			name = AESGCMEncription;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -768,6 +782,7 @@
 				65E733D51FEC031B0009EAC6 /* JWKRSAKeysTests.swift in Sources */,
 				65E733D31FEBFDB30009EAC6 /* JWKtoJSONTests.swift in Sources */,
 				65B5B93E23F55978009C8396 /* RSAKeyManagementModeTests.swift in Sources */,
+				F92B5B622ABDACE700CF5FDA /* AESGCMEncryptionTests.swift in Sources */,
 				C803EFE51FA77E3000B71335 /* JWSRSATests.swift in Sources */,
 				C84BDE191FAB44BE0002B5D0 /* CryptoTestCase.swift in Sources */,
 				7402BEB526288DCD0012801E /* JWSHMACTests.swift in Sources */,
@@ -814,6 +829,7 @@
 				6572C2F21F96428800D4186D /* Decrypter.swift in Sources */,
 				653656092035D86E00A3AC3B /* JWKSet.swift in Sources */,
 				65D1D0671F7A878D006377CD /* Deserializer.swift in Sources */,
+				F92B5B602ABDABF400CF5FDA /* AESGCMEncryption.swift in Sources */,
 				65F44EB11FE2D941000C5EA0 /* JWK.swift in Sources */,
 				6582614F2029F2D100B594ED /* ASN1DERParsing.swift in Sources */,
 				C85012E31FE04E0C00EC49FA /* SecureRandom.swift in Sources */,
@@ -956,7 +972,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1016,7 +1032,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
